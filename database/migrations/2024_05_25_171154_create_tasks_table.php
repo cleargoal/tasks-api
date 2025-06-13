@@ -22,6 +22,7 @@ return new class extends Migration {
             $table->string('title')->fullText();
             $table->text('description')->fullText();
             $table->timestamps();
+            $table->timestamp('due_date')->nullable();
             $table->timestamp('completed_at')->nullable();
         });
     }
