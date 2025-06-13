@@ -5,7 +5,7 @@ info:
   description: API documentation for the Task Manager application
 
 servers:
-  - url: http://localhost:8008/api
+  - url: http://localhost:8010/api
     description: Local development server
 
 components:
