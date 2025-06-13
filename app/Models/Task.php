@@ -17,7 +17,7 @@ class Task extends Model
 {
     use HasFactory, Searchable;
 
-    protected $fillable = ['user_id', 'parent_id', 'status', 'priority', 'title', 'description', 'completed_at',];
+    protected $fillable = ['user_id', 'parent_id', 'status', 'priority', 'title', 'description', 'completed_at', 'due_date',];
 
     protected $casts = [
         'status' => StatusEnum::class,
