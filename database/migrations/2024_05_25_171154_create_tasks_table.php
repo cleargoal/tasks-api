@@ -21,8 +21,8 @@ return new class extends Migration {
             $table->string('priority')->default(\App\Enums\PriorityEnum::MID)->index();
             $table->string('title')->fullText();
             $table->text('description')->fullText();
+            $table->date('due_date')->nullable();
             $table->timestamps();
-            $table->timestamp('due_date')->nullable();
             $table->timestamp('completed_at')->nullable();
         });
     }
