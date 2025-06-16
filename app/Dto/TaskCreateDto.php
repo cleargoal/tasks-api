@@ -7,29 +7,14 @@ namespace App\Dto;
 use App\Enums\StatusEnum;
 use App\Enums\PriorityEnum;
 
-class TaskCreateDto
+readonly class TaskCreateDto
 {
-    public int $userId;
-    public ?int $parentId;
-    public string $title;
-    public string $description;
-    public StatusEnum $status;
-    public PriorityEnum $priority;
-
     public function __construct(
-        int          $userId,
-        string       $title,
-        string       $description,
-        StatusEnum   $status = StatusEnum::TODO,
-        PriorityEnum $priority = PriorityEnum::LOW,
-        ?int         $parentId = null,
-    )
-    {
-        $this->userId = $userId;
-        $this->title = $title;
-        $this->description = $description;
-        $this->status = $status;
-        $this->priority = $priority;
-        $this->parentId = $parentId;
-    }
+        public int $userId,
+        public string $title,
+        public string $description,
+        public StatusEnum $status = StatusEnum::TODO,
+        public PriorityEnum $priority = PriorityEnum::LOW,
+        public ?int $parentId = null,
+    ) {}
 }
